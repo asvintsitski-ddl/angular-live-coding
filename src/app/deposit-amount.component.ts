@@ -11,32 +11,7 @@ import { PaymentService } from './payment.service';
 
 @Component({
   selector: 'app-deposit-amount',
-  template: `
-    <form [formGroup]="form" (ngSubmit)="submit()">
-      <label>Сумма</label>
-      <input formControlName="amount" type="text" />
-
-      <div *ngIf="form.controls.amount.errors?.min">Минимум {{ minAmount }}$</div>
-
-      <select formControlName="bank">
-        <option *ngFor="let bank of getBanks()" [value]="bank.id">{{ bank.name }}</option>
-      </select>
-
-      <div class="converter" style="margin-left: 16px">
-        Вы получите: {{ getConverted() }}
-        <span>Курс: {{ rate?.toFixed(2) }}</span>
-      </div>
-
-      <div [innerHTML]="serverMessage"></div>
-
-      <label>
-        <input type="checkbox" formControlName="agree" />
-        Я согласен с курсом
-      </label>
-
-      <button type="submit" [disabled]="isLoading">Пополнить</button>
-    </form>
-  `,
+  templateUrl: './deposit-amount.component.html',
 })
 export class DepositAmountComponent implements OnInit {
   @Input() set currency(value: string) {

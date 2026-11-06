@@ -6,7 +6,7 @@
 
 ## Задания
 
-1. [`src/app/deposit-amount.component.ts`](src/app/deposit-amount.component.ts) — компонент ввода суммы пополнения.
+1. [`src/app/deposit-amount.component.ts`](src/app/deposit-amount.component.ts) и [`deposit-amount.component.html`](src/app/deposit-amount.component.html) — компонент ввода суммы пополнения.
 2. [`src/app/payment.service.ts`](src/app/payment.service.ts) — сервис платежей, который используют несколько форм.
 
 На что смотреть:
